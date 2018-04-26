@@ -1,0 +1,169 @@
+	Tue Oct 03 18:27 2017 Time and Allocation Profiling Report  (Final)
+
+	   Ex2Refactored.exe +RTS -p -RTS
+
+	total time  =       23.56 secs   (23557 ticks @ 1000 us, 1 processor)
+	total alloc = 12,423,060,036 bytes  (excludes profiling overheads)
+
+COST CENTRE   MODULE    %time %alloc
+
+eraseS        Main       30.9   37.9
+bl            Main       18.4   24.7
+update        Main       11.5    0.0
+length3rd     Main        7.7    7.1
+extendNode    Main        7.3    6.8
+prune         Main        5.2    9.6
+freeAtPos'    Main        5.1    8.6
+freeAtPos'.ys Main        4.4    0.2
+eraseN.s      Main        4.4    0.0
+sameblock     Main        4.1    4.3
+
+
+                                                                              individual     inherited
+COST CENTRE                      MODULE                     no.     entries  %time %alloc   %time %alloc
+
+MAIN                             MAIN                        48           0    0.0    0.0   100.0  100.0
+ CAF                             GHC.Integer.Type            95           0    0.0    0.0     0.0    0.0
+ CAF                             GHC.IO.Encoding.CodePage    85           0    0.0    0.0     0.0    0.0
+ CAF                             GHC.IO.Encoding             82           0    0.0    0.0     0.0    0.0
+ CAF                             GHC.IO.Handle.Text          80           0    0.0    0.0     0.0    0.0
+ CAF                             System.CPUTime              74           0    0.0    0.0     0.0    0.0
+ CAF                             GHC.IO.Handle.FD            71           0    0.0    0.0     0.0    0.0
+ CAF                             Data.Fixed                  59           0    0.0    0.0     0.0    0.0
+ CAF                             Data.Time.Clock.POSIX       57           0    0.0    0.0     0.0    0.0
+ CAF                             System.Random               56           0    0.0    0.0     0.0    0.0
+ CAF                             Main                        55           0    0.0    0.0   100.0  100.0
+  solveNs                        Main                       156           1    0.0    0.0     0.0    0.0
+  showSudoku                     Main                       147           1    0.0    0.0     0.0    0.0
+  extend                         Main                       138           1    0.0    0.0     0.0    0.0
+  blocks                         Main                       119           1    0.0    0.0     0.0    0.0
+  blockConstrnt                  Main                       118           1    0.0    0.0     0.0    0.0
+  columnConstrnt                 Main                       117           1    0.0    0.0     0.0    0.0
+  values                         Main                       116           1    0.0    0.0     0.0    0.0
+  rowConstrnt                    Main                       115           1    0.0    0.0     0.0    0.0
+  allConstraints                 Main                       114           1    0.0    0.0     0.0    0.0
+  positions                      Main                       109           1    0.0    0.0     0.0    0.0
+  emptyN                         Main                       106           1    0.0    0.0     0.0    0.0
+   constraints                   Main                       107           1    0.0    0.0     0.0    0.0
+    freeAtPos'                   Main                       112          81    0.0    0.0     0.0    0.0
+     emptyN.\                    Main                       120        2187    0.0    0.0     0.0    0.0
+     freeAtPos'.ys               Main                       113          81    0.0    0.0     0.0    0.0
+    length3rd                    Main                       111          80    0.0    0.0     0.0    0.0
+    openPositions                Main                       108           1    0.0    0.0     0.0    0.0
+     emptyN.\                    Main                       110          81    0.0    0.0     0.0    0.0
+  solved                         Main                       104           1    0.0    0.0     0.0    0.0
+  genRandomSudoku                Main                        98           1    0.0    0.0     0.0    0.0
+   rsolveNs                      Main                       100           1    0.0    0.0     0.0    0.0
+    rsearch                      Main                       101           1    0.0    0.0     0.0    0.0
+  main                           Main                        96           1    0.0    0.0   100.0  100.0
+   testSudokuSolver              Main                        97          51    0.0    0.0   100.0  100.0
+    solveNs                      Main                       202           0    0.0    0.0     1.5    2.0
+     search                      Main                       203       12001    0.0    0.0     1.5    2.0
+      succNode                   Main                       205       11951    0.0    0.0     1.5    1.9
+       extendNode                Main                       206       11951    0.2    0.3     1.5    1.9
+        length3rd                Main                       208      813547    0.3    0.3     0.3    0.3
+        prune                    Main                       207      406145    0.2    0.4     1.0    1.4
+         sameblock               Main                       209      318917    0.1    0.2     0.8    1.1
+          bl                     Main                       210      799532    0.7    0.9     0.7    0.9
+      solved                     Main                       204           0    0.0    0.0     0.0    0.0
+    showSudoku                   Main                       148           0    0.0    0.0     0.3    0.2
+     sud2grid                    Main                       150         100    0.0    0.0     0.1    0.1
+      solveNs                    Main                       211           0    0.0    0.0     0.1    0.0
+       search                    Main                       212           0    0.0    0.0     0.1    0.0
+        succNode                 Main                       213           0    0.0    0.0     0.1    0.0
+         extendNode              Main                       214           0    0.0    0.0     0.1    0.0
+          update                 Main                       215      201285    0.0    0.0     0.1    0.0
+           genRandomSudoku       Main                       226           0    0.0    0.0     0.0    0.0
+            rsolveNs             Main                       227           0    0.0    0.0     0.0    0.0
+             rsearch             Main                       228           0    0.0    0.0     0.0    0.0
+              rsuccNode          Main                       229           0    0.0    0.0     0.0    0.0
+           genProblem            Main                       216           0    0.0    0.0     0.0    0.0
+            minimalize           Main                       217           0    0.0    0.0     0.0    0.0
+             minimalize.n'       Main                       218           0    0.0    0.0     0.0    0.0
+              eraseN             Main                       219           0    0.0    0.0     0.0    0.0
+               eraseN.s          Main                       220           0    0.0    0.0     0.0    0.0
+                eraseS           Main                       221       69156    0.0    0.0     0.0    0.0
+                 genRandomSudoku Main                       222           0    0.0    0.0     0.0    0.0
+                  rsolveNs       Main                       223           0    0.0    0.0     0.0    0.0
+                   rsearch       Main                       224           0    0.0    0.0     0.0    0.0
+                    rsuccNode    Main                       225           0    0.0    0.0     0.0    0.0
+      genProblem                 Main                       190           0    0.0    0.0     0.1    0.0
+       minimalize                Main                       191           0    0.0    0.0     0.1    0.0
+        minimalize.n'            Main                       192           0    0.0    0.0     0.1    0.0
+         eraseN                  Main                       193           0    0.0    0.0     0.1    0.0
+          eraseN.s               Main                       194           0    0.0    0.0     0.1    0.0
+           eraseS                Main                       195      150362    0.0    0.0     0.1    0.0
+            genRandomSudoku      Main                       196           0    0.0    0.0     0.0    0.0
+             rsolveNs            Main                       197           0    0.0    0.0     0.0    0.0
+              rsearch            Main                       198           0    0.0    0.0     0.0    0.0
+               rsuccNode         Main                       199           0    0.0    0.0     0.0    0.0
+                extendNode       Main                       200           0    0.0    0.0     0.0    0.0
+                 update          Main                       201       50923    0.0    0.0     0.0    0.0
+     showGrid                    Main                       149         100    0.0    0.0     0.2    0.1
+      showRow                    Main                       151         900    0.1    0.1     0.1    0.1
+       showVal                   Main                       152        8100    0.0    0.0     0.0    0.0
+    genProblem                   Main                       133          50    0.0    0.0    97.5   97.0
+     minimalize                  Main                       153        4100    0.0    0.0    97.4   96.9
+      minimalize.n'              Main                       160        4050    0.0    0.0    59.5   47.1
+       eraseN                    Main                       161        4050    0.0    0.0    59.5   47.1
+        eraseN.s                 Main                       164        4050    0.0    0.0     0.0    0.0
+        constraints              Main                       162        4050    0.2    0.3    59.5   47.1
+         length3rd               Main                       186      636292    0.3    0.2     0.3    0.2
+         freeAtPos'              Main                       175      146558    5.1    8.5    54.9   44.0
+          eraseN.s               Main                       177           0    4.0    0.0    45.4   35.3
+           eraseS                Main                       178   122633311   28.7   35.3    41.4   35.3
+            genRandomSudoku      Main                       179           0    0.0    0.0    12.7    0.0
+             rsolveNs            Main                       180           0    0.0    0.0    12.7    0.0
+              rsearch            Main                       181           0    0.0    0.0    12.7    0.0
+               rsuccNode         Main                       182           0    0.0    0.0    12.7    0.0
+                extendNode       Main                       183           0    2.4    0.0    12.7    0.0
+                 update          Main                       184    65370963   10.2    0.0    10.2    0.0
+          freeAtPos'.ys          Main                       176      146558    4.4    0.2     4.4    0.2
+         openPositions           Main                       163        4050    0.1    0.1     4.0    2.6
+          eraseN.s               Main                       165           0    0.3    0.0     3.9    2.5
+           eraseS                Main                       166     8640003    2.2    2.5     3.6    2.5
+            genRandomSudoku      Main                       167           0    0.0    0.0     1.5    0.0
+             rsolveNs            Main                       168           0    0.0    0.0     1.5    0.0
+              rsearch            Main                       169           0    0.0    0.0     1.5    0.0
+               rsuccNode         Main                       170           0    0.0    0.0     1.5    0.0
+                extendNode       Main                       171           0    0.3    0.0     1.5    0.0
+                 update          Main                       172     7442612    1.2    0.0     1.2    0.0
+      uniqueSol                  Main                       154        4050    0.0    0.0    37.9   49.8
+       solveNs                   Main                       157           0    0.0    0.0    37.9   49.8
+        search                   Main                       158      367155    0.2    0.2    37.9   49.8
+         succNode                Main                       173      359055    0.1    0.0    37.7   49.6
+          extendNode             Main                       174      359055    4.3    6.4    37.6   49.5
+           length3rd             Main                       189    20318934    7.1    6.5     7.1    6.5
+           prune                 Main                       185    10521756    4.9    9.1    26.3   36.6
+            sameblock            Main                       187     8184906    3.9    4.1    21.4   27.5
+             bl                  Main                       188    20475714   17.5   23.4    17.5   23.4
+         solved                  Main                       159           0    0.1    0.0     0.1    0.0
+       uniqueSol.singleton       Main                       155        4050    0.0    0.0     0.0    0.0
+     genProblem.xs               Main                       136          50    0.0    0.0     0.0    0.0
+      filledPositions            Main                       137          50    0.0    0.0     0.0    0.0
+       genRandomSudoku           Main                       139           0    0.0    0.0     0.0    0.0
+        rsolveNs                 Main                       140           0    0.0    0.0     0.0    0.0
+         rsearch                 Main                       141           0    0.0    0.0     0.0    0.0
+          rsuccNode              Main                       142           0    0.0    0.0     0.0    0.0
+           extendNode            Main                       143           0    0.0    0.0     0.0    0.0
+            update               Main                       144      166050    0.0    0.0     0.0    0.0
+     randomize                   Main                       134        4100    0.0    0.0     0.0    0.0
+      getRandomItem              Main                       135        4100    0.0    0.0     0.0    0.0
+       getRandomItem.maxi        Main                       146        4050    0.0    0.0     0.0    0.0
+       getRandomInt              Main                       145        4050    0.0    0.0     0.0    0.0
+    genRandomSudoku              Main                        99           0    0.0    0.0     0.7    0.9
+     rsolveNs                    Main                       102           0    0.0    0.0     0.7    0.9
+      rsearch                    Main                       103        4293    0.0    0.0     0.7    0.9
+       rsuccNode                 Main                       121        4249    0.0    0.0     0.7    0.9
+        extendNode               Main                       128        4249    0.0    0.1     0.6    0.8
+         length3rd               Main                       132      342670    0.1    0.1     0.1    0.1
+         prune                   Main                       129      172031    0.1    0.2     0.4    0.6
+          sameblock              Main                       130      134046    0.1    0.1     0.4    0.5
+           bl                    Main                       131      335184    0.3    0.4     0.3    0.4
+        getRandomCnstr           Main                       122        4249    0.0    0.0     0.1    0.0
+         getRandomCnstr.f        Main                       124        4249    0.0    0.0     0.0    0.0
+          sameLen                Main                       125       27271    0.0    0.0     0.0    0.0
+         getRandomItem           Main                       123        4249    0.0    0.0     0.0    0.0
+          getRandomItem.maxi     Main                       127        4249    0.0    0.0     0.0    0.0
+          getRandomInt           Main                       126        4249    0.0    0.0     0.0    0.0
+       solved                    Main                       105           0    0.0    0.0     0.0    0.0
